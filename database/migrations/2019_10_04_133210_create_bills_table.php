@@ -18,6 +18,7 @@ class CreateBillsTable extends Migration
             $table->string('supplier_name');
             $table->string('site_name');
             $table->string('ref_no');
+            $table->string('added_by');
             $table->string('date_added');
             $table->timestamps();
         });

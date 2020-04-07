@@ -18,16 +18,21 @@ class CreateBillsDetailsTable extends Migration
             $table->string('item');
             $table->integer('price');
             $table->integer('quantity');
-            $table->string('description');
             $table->string('ref_no');
             $table->integer('total_cost');
             $table->integer('balance');
             $table->integer('amount_paid');
-            $table->string('clearing_date')->nullable();
-            $table->string('posting_date')->nullable();
+            $table->integer('vat');
+            $table->text('status');
+            $table->string('due_date');
+            $table->string('return_status')->nullable();
             $table->string('mode_payment')->nullable();
             $table->string('mpesa_code')->nullable();
-            $table->integer('vat');
+            $table->string('clearing_date')->nullable();
+            $table->string('posting_date')->nullable();
+            $table->text('payment_clearance_status')->nullable();
+            $table->integer('pending_bank_amount')->nullable();
+            $table->integer('pending_bank_balances')->nullable();
             $table->timestamps();
         });
     }

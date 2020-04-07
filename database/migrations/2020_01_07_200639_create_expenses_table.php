@@ -15,15 +15,11 @@ class CreateExpensesTable extends Migration
     {
         Schema::create('expenses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('expense');
             $table->string('site');
-            $table->integer('amount');
             $table->text('mode_payment');
             $table->string('cheque_no')->nullable();
             $table->string('mpesa_code')->nullable();
             $table->string('date_paid');
-            $table->string('month');
-            $table->string('year');
             $table->timestamps();
         });
     }
